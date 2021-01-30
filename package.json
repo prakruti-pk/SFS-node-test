@@ -1,0 +1,22 @@
+{
+  "name": "creditor-api",
+  "version": "1.0.0",
+  "description": "A small API that provides creditor features.",
+  "repository": "https://github.com/prakruti-pk/creditor-api",
+  "main": "index.js",
+  "scripts": {
+    "seed": "node script/seed.js",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prakruti PK",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0"
+  }
+}
