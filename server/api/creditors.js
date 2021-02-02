@@ -3,11 +3,11 @@ const Creditor = require("../db/models");
 const Sequelize = require("sequelize");
 
 router.get("/", async (req, res, next) => {
-  if (req.query.creditorName) {
+  if (req.query.name) {
     try {
       const creditors = await Creditor.findAll({
         where: {
-          creditorName: req.query.creditorName,
+          creditorName: req.query.name,
         },
       });
       res.json(creditors);
@@ -59,7 +59,6 @@ router.put("/:creditorId", async (req, res, next) => {
     next(err);
   }
 });
-
 
 
 module.exports = router;
